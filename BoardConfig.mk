@@ -44,7 +44,16 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 BOARD_HAS_NO_SELECT_BUTTON := true
 
+# filesystem
+TARGET_USERIMAGES_USE_EXT4 := true
+BOARD_CACHEIMAGE_FILE_SYSTEM_TYPE := ext4
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+
+
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
+
+# recovery
+TARGET_RECOVERY_FSTAB := device/samsung/j8y18lte/recovery.fstab
 
 # TWRP specific build flags
 TW_THEME := portrait_hdpi
