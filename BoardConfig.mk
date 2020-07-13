@@ -3,7 +3,7 @@ USE_CAMERA_STUB := true
 # inherit from the proprietary version
 -include vendor/samsung/j8y18lte/BoardConfigVendor.mk
 
-TARGET_ARCH := arm
+TARGET_ARCH := arm64
 TARGET_NO_BOOTLOADER := true
 TARGET_BOARD_PLATFORM := msm8953
 TARGET_CPU_ABI := armeabi-v7a
@@ -24,8 +24,8 @@ BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_TAGS_OFFSET := 0x01e00000
 BOARD_SECOND_OFFSET := 0x00f00000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
-TARGET_PREBUILT_KERNEL := device/samsung/j8y18lte/Image.gz-dtb
+TARGET_KERNEL_SOURCE := kernel/samsung/j8y18lte
+TARGET_KERNEL_CONFIG := sdm450_sec_j8y18lte_swa_open_defconfig
 TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 
