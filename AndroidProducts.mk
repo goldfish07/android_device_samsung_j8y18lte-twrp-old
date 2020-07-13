@@ -1,2 +1,2 @@
 PRODUCT_MAKEFILES := \
-    $(LOCAL_DIR)/j8y18lte.mk
+    $(LOCAL_DIR)/omni_j8y18lte.mk

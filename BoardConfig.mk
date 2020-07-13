@@ -26,6 +26,7 @@ BOARD_SECOND_OFFSET := 0x00f00000
 BOARD_KERNEL_PAGESIZE := 2048
 BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 TARGET_PREBUILT_KERNEL := device/samsung/j8y18lte/Image.gz-dtb
+TARGET_KERNEL_CROSS_COMPILE_PREFIX := aarch64-linux-android-
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 
 # mkbootimg args
@@ -41,23 +42,33 @@ BOARD_VENDORIMAGE_PARTITION_SIZE := 475004928
 BOARD_FLASH_BLOCK_SIZE := 131072
 
 
-
 BOARD_HAS_NO_SELECT_BUTTON := true
 
 # filesystem
 TARGET_USERIMAGES_USE_EXT4 := true
 
-
+# Workaround for error copying vendor files to recovery ramdisk
+BOARD_VENDORIMAGE_FILE_SYSTEM_TYPE := ext4
+TARGET_COPY_OUT_VENDOR := vendor
 
 
 TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
 
 # recovery
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
 TARGET_RECOVERY_FSTAB := device/samsung/j8y18lte/recovery.fstab
+BOARD_HAS_LARGE_FILESYSTEM := true
+
+# Crypto
+TW_INCLUDE_CRYPTO := true
+TW_INCLUDE_FBE := true
 
 # TWRP specific build flags
+RECOVERY_VARIANT := twrp
 TW_THEME := portrait_hdpi
-TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+TW_BRIGHTNESS_PATH := "/sys/class/backlight/panel/brightness"
+TW_MAX_BRIGHTNESS := 25
+TW_DEFAULT_BRIGHTNESS := 100
 RECOVERY_SDCARD_ON_DATA := true
 BOARD_HAS_NO_REAL_SDCARD := true
 TW_NO_REBOOT_BOOTLOADER := true
@@ -66,4 +77,6 @@ TW_INCLUDE_CRYPTO := true
 TW_EXCLUDE_SUPERSU := true
 TW_INCLUDE_NTFS_3G := true
 TW_EXTRA_LANGUAGES := true
+BOARD_SUPPRESS_SECURE_ERASE := true
+
 TW_USE_TOOLBOX := true
