@@ -43,3 +43,18 @@ BOARD_FLASH_BLOCK_SIZE := 131072
 
 
 BOARD_HAS_NO_SELECT_BUTTON := true
+
+TARGET_USE_CUSTOM_LUN_FILE_PATH := /sys/class/android_usb/android0/f_mass_storage/lun/file
+
+# TWRP specific build flags
+TW_THEME := portrait_hdpi
+TARGET_RECOVERY_PIXEL_FORMAT := "ABGR_8888"
+RECOVERY_SDCARD_ON_DATA := true
+BOARD_HAS_NO_REAL_SDCARD := true
+TW_NO_REBOOT_BOOTLOADER := true
+TW_HAS_DOWNLOAD_MODE := true
+TW_INCLUDE_CRYPTO := true
+TW_EXCLUDE_SUPERSU := true
+TW_INCLUDE_NTFS_3G := true
+TW_EXTRA_LANGUAGES := true
+TW_USE_TOOLBOX := true
