@@ -24,8 +24,8 @@ BOARD_RAMDISK_OFFSET := 0x02000000
 BOARD_TAGS_OFFSET := 0x01e00000
 BOARD_SECOND_OFFSET := 0x00f00000
 BOARD_KERNEL_PAGESIZE := 2048
-BOARD_KERNEL_IMAGE_NAME := Image-dtb
-TARGET_PREBUILT_KERNEL := device/samsung/j8y18lte/Image-dtb
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
+TARGET_PREBUILT_KERNEL := device/samsung/j8y18lte/Image.gz-dtb
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 
 # mkbootimg args
