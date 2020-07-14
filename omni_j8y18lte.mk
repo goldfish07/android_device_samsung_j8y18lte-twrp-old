@@ -3,8 +3,8 @@ PRODUCT_RELEASE_NAME := j8y18lte
 
 LOCAL_PATH := device/samsung/$(PRODUCT_RELEASE_NAME)
 
-# Inherit some common omni stuff.
-$(call inherit-product, vendor/omni/config/common.mk)
+# Inherit some common lineage stuff.
+$(call inherit-product, vendor/lineage/config/common_full_phone.mk)
 
 # Resolution
 TARGET_SCREEN_WIDTH := 720
