@@ -40,6 +40,8 @@ PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 PRODUCT_DEFAULT_PROPERTY_OVERRIDES += \
 	persist.sys.usb.config=mtp,adb
 
+#Allow_missing_dependencies
+ALLOW_MISSING_DEPENDENCIES=true
 
 ## Device identifier. This must come after all inclusions
 PRODUCT_DEVICE := j8y18lte
