@@ -22,7 +22,7 @@ TARGET_2ND_CPU_VARIANT := cortex-a53
 
 TARGET_USES_64_BIT_BINDER := true
 
-TARGET_BOOTLOADER_BOARD_NAME := SRPRD16A003RU
+TARGET_BOOTLOADER_BOARD_NAME := MSM8953
 
 TARGET_BOARD_PLATFORM_GPU := qcom-adreno506
 # kernel
@@ -36,7 +36,7 @@ BOARD_KERNEL_PAGESIZE := 2048
 TARGET_KERNEL_SOURCE := kernel/samsung/j8y18lte
 TARGET_KERNEL_CONFIG := j8y18lte_defconfig
 #TARGET_PREBUILT_KERNEL := device/samsung/j8y18lte/Image
-#BOARD_KERNEL_IMAGE_NAME := Image
+BOARD_KERNEL_IMAGE_NAME := Image.gz-dtb
 BOARD_KERNEL_CMDLINE := console=null androidboot.hardware=qcom msm_rtb.filter=0x237 ehci-hcd.park=3 androidboot.bootdevice=7824900.sdhci lpm_levels.sleep_disabled=1 androidboot.selinux=permissive
 
 # mkbootimg args
